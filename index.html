@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RK 250 - Calculadora</title>
+    <link rel="stylesheet"
+    href = "style.css">
+</head>
+<body>
+    <div class="card">
+        <h1> Mi Meta: RK 250 </h1>
+
+        <label> Precio de la moto ($):</label>
+        <input type="number"
+        id="precioMoto" value="2200">
+
+        <label> Ahorro actual ($):</label>
+        <input type="number"
+        id="ahorroActual" value="105">
+
+        <label> Ingreso semanal($):</label>
+        <input type="number"
+        id="ingresoSemanal" value="25">
+
+        <button onclick="calcularSemanas()">Calcular mi tiempo</button>
+
+        <div id="resultado"
+        class="resultado"></div>
+        <div class="progreso-container">
+            <div id="barra-progreso"></div>
+        </div>
+        <p id="texto-porcentaje">0% de la meta</p>
+    </div>
+    <img src="https://gbvm.knoios.com/mmedia/20083/captura-de-pantalla-2024-12-26-a-las-20858-p-mpng-33735.png">
+        <script src="01-algoritmo-calculo-ahorros.js"></script>
+</body>
+</html>
