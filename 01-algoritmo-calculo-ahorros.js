@@ -16,11 +16,12 @@ function calcularSemanas() {
     const precio = Number(document.getElementById('precioMoto').value);
     const ahorro = Number(document.getElementById('ahorroActual').value); 
     const ingreso = Number(document.getElementById('ingresoSemanal').value);
-    
+
+    if (precio > 0 && ahorro > 0 && ingreso > 0) {
     let falta = precio - ahorro;
     let semanas = Math.ceil(falta / ingreso);
 
-    const divResultado = document.getElementById('resultado');
+    const divResultado = document.getElementById('resultado'); {
         divResultado.innerHTML = `Te faltan ${(semanas / 4.33).toFixed(1)} meses para estrenar tu RK 250`;
         let porcentaje = (ahorro / precio) * 100;
         if (porcentaje > 100) porcentaje = 100;
@@ -28,5 +29,10 @@ function calcularSemanas() {
         const textoPorcentaje = document.getElementById('texto-porcentaje');
         barra.style.width = porcentaje + "%";
         textoPorcentaje.innerText =
-        porcentaje.toFixed(1) + "% de tu meta alcanzada";
+        porcentaje.toFixed(1) + "% de tu meta alcanzada";}
+    } else {
+        const divResultadoAlterno = document.getElementById('resultado'); {
+            divResultadoAlterno.innerHTML = 'inserta un numero en los espacios';
+        }
+    }
     }
